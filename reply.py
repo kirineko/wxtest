@@ -4,7 +4,7 @@ import bots
 
 def reply_user(msg):
 
-    reply_msg = bots.bots.deepThought.get_response(msg).text
+    reply_msg = bots.Bots.deepThought.get_response(msg).text
     return reply_msg
 class Msg(object):
     def __init__(self):

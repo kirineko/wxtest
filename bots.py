@@ -15,5 +15,4 @@ class Bots:
     deepThought.train("chatterbot.corpus.chinese")  # 语料库
     # Of course you can have any attributes or methods you like.
 
-
-bots = Bots()
+#bots = Bots()

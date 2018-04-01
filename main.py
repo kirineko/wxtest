@@ -9,6 +9,5 @@ urls = (
 )
 
 if __name__ == '__main__':
-    bots.bots
     app = web.application(urls, globals())
     app.run()
