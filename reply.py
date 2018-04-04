@@ -1,11 +1,6 @@
 # -*- coding: utf-8 -*-# filename: reply.py
 import time
-import bots
 
-def reply_user(msg):
-
-    reply_msg = bots.Bots.deepThought.get_response(msg.decoed()).text
-    return reply_msg
 class Msg(object):
     def __init__(self):
         pass
