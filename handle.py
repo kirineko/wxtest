@@ -5,7 +5,7 @@ import hashlib
 import web
 import reply
 import receive
-from main import deepThought
+from aiboot import deepThought
 
 class Handle(object):
     def GET(self):
