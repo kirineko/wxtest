@@ -5,6 +5,7 @@ import hashlib
 import web
 import reply
 import receive
+from main import deepThought
 
 class Handle(object):
     def GET(self):
@@ -40,7 +41,7 @@ class Handle(object):
             if isinstance(recMsg, receive.Msg) and recMsg.MsgType == 'text':
                 toUser = recMsg.FromUserName
                 fromUser = recMsg.ToUserName
-                content = recMsg.Content
+                content = deepThought.get_response(recMsg.Content).encode('utf-8')
                 replyMsg = reply.TextMsg(toUser, fromUser, content)
                 return replyMsg.send()
             else:
