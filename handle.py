@@ -42,6 +42,7 @@ class Handle(object):
                 toUser = recMsg.FromUserName
                 fromUser = recMsg.ToUserName
                 # todo:注意返回的对象
+                print(deepThought.get_response('你好'))
                 content = deepThought.get_response(recMsg.Content)
                 print(deepThought.get_response(recMsg.Content))
                 print(type(deepThought.get_response(recMsg.Content)))
