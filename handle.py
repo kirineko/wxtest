@@ -41,7 +41,10 @@ class Handle(object):
             if isinstance(recMsg, receive.Msg) and recMsg.MsgType == 'text':
                 toUser = recMsg.FromUserName
                 fromUser = recMsg.ToUserName
-                content = deepThought.get_response(recMsg.Content).encode('utf-8')
+                # todo:注意返回的对象
+                content = deepThought.get_response(recMsg.Content)
+                print(deepThought.get_response(recMsg.Content))
+                print(type(deepThought.get_response(recMsg.Content)))
                 replyMsg = reply.TextMsg(toUser, fromUser, content)
                 return replyMsg.send()
             else:
