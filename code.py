@@ -8,8 +8,5 @@ urls = (
     '/wx', 'Handle',
 )
 
-
-
 app = web.application(urls, globals())
-application = app.wsgifunc()
-app.run()
+wsgiapp = app.wsgifunc()
